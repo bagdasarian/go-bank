@@ -35,6 +35,9 @@ tables:
 
 restart: down up
 
+sqlc:
+	sqlc generate
+
 help:
 	@echo "Доступные команды:"
 	@echo "  make up        - Старт всех сервисов"
@@ -48,3 +51,4 @@ help:
 	@echo "  make status    - Проверить статус БД"
 	@echo "  make tables    - Показать таблицы в БД"
 	@echo "  make restart   - Перезапустить сервисы"
+	@echo "  make sqlc   	- Сгенерировать go код для CRUD запросов"
