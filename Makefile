@@ -38,6 +38,9 @@ restart: down up
 sqlc:
 	sqlc generate
 
+test:
+	go test -v -cover ./...
+
 help:
 	@echo "Доступные команды:"
 	@echo "  make up        - Старт всех сервисов"
@@ -52,3 +55,4 @@ help:
 	@echo "  make tables    - Показать таблицы в БД"
 	@echo "  make restart   - Перезапустить сервисы"
 	@echo "  make sqlc   	- Сгенерировать go код для CRUD запросов"
+	@echo "  make test   	- Запустить все тесты "
